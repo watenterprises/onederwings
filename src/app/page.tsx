@@ -136,7 +136,7 @@ export default function Home() {
       </SectionWrapper>
 
       {/* Stats Section */}
-      <SectionWrapper background="blue" className="text-white">
+      <SectionWrapper background="skyBlue">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           {[
             { number: "10+", label: "Years of Excellence", icon: <Award className="w-8 h-8 mb-2 mx-auto" /> },

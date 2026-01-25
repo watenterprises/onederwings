@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Bird } from "lucide-react";
@@ -47,14 +48,20 @@ const Navbar = () => {
             <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
                 {/* Logo */}
                 <Link href="/" className="flex items-center gap-2 group">
-                    <div className="bg-brand-yellow p-2 rounded-full group-hover:rotate-12 transition-transform duration-300">
-                        <Bird className="w-8 h-8 text-white" fill="white" />
+                    <div className="relative w-12 h-12 group-hover:rotate-12 transition-transform duration-300">
+                        <Image
+                            src="/logo.png"
+                            alt="OneDer Wings Logo"
+                            fill
+                            className="object-contain"
+                        />
                     </div>
                     <div className="leading-tight">
-                        <span className="block font-bold text-xl md:text-2xl text-brand-blue font-display tracking-tight">
-                            ONEDER WINGS
-                        </span>
-                        <span className="block text-xs md:text-sm font-bold text-brand-orange">
+                        <div className="font-bold text-xl md:text-2xl font-display tracking-tight flex items-center">
+                            <span className="text-[#FFB82E]">ONEder</span>
+                            <span className="text-[#F06640] ml-1">Wings</span>
+                        </div>
+                        <span className="block text-xs md:text-sm font-bold text-[#305672] tracking-[0.2em]">
                             PRE SCHOOL
                         </span>
                     </div>

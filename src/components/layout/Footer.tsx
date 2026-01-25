@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Facebook, Instagram, Mail, MapPin, Phone, Twitter } from "lucide-react";
 
 const Footer = () => {
@@ -10,9 +11,25 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
                     {/* Brand */}
                     <div className="md:col-span-1">
-                        <h3 className="font-display font-bold text-2xl text-brand-blue mb-4">
-                            ONEDER WINGS
-                        </h3>
+                        <Link href="/" className="flex items-center gap-2 mb-4 group">
+                            <div className="relative w-10 h-10">
+                                <Image
+                                    src="/logo.png"
+                                    alt="OneDer Wings Logo"
+                                    fill
+                                    className="object-contain"
+                                />
+                            </div>
+                            <div className="leading-tight">
+                                <div className="font-bold text-xl font-display tracking-tight flex items-center">
+                                    <span className="text-[#FFB82E]">ONEder</span>
+                                    <span className="text-[#F06640] ml-1">Wings</span>
+                                </div>
+                                <span className="block text-[10px] font-bold text-[#305672] tracking-[0.2em]">
+                                    PRE SCHOOL
+                                </span>
+                            </div>
+                        </Link>
                         <p className="text-gray-600 mb-6 font-medium">
                             Where little ones learn to fly. A safe, nurturing, and colorful environment for your child's first steps in education.
                         </p>

@@ -5,7 +5,7 @@ interface SectionWrapperProps extends React.HTMLAttributes<HTMLElement> {
     children: React.ReactNode;
     className?: string; // Additional classes
     id?: string;
-    background?: "white" | "yellow" | "blue" | "orange" | "purple" | "cloud";
+    background?: "white" | "yellow" | "blue" | "orange" | "purple" | "cloud" | "skyBlue";
 }
 
 const SectionWrapper: React.FC<SectionWrapperProps> = ({
@@ -22,6 +22,7 @@ const SectionWrapper: React.FC<SectionWrapperProps> = ({
         orange: "bg-brand-orange/10",
         purple: "bg-brand-purple/10",
         cloud: "bg-cloud-pattern bg-cover bg-no-repeat",
+        skyBlue: "bg-brand-blue text-white",
     };
 
     return (
