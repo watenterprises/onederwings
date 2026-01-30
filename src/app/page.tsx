@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight, Star, Heart, Sun, Clock, BookOpen, Quote, Smile, Users, Award } from "lucide-react";
@@ -51,12 +52,16 @@ export default function Home() {
                 A magical place where play leads to learning, and every day is a new adventure for your child.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                <Button size="lg" className="shadow-brand-orange/30 shadow-lg">
-                  Start the Journey <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-                <Button variant="outline" size="lg">
-                  Book a Campus Tour
-                </Button>
+                <Link href="/contact">
+                  <Button size="lg" className="shadow-brand-orange/30 shadow-lg">
+                    Start the Journey <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </Link>
+                <Link href="/contact">
+                  <Button variant="outline" size="lg">
+                    Book a Campus Tour
+                  </Button>
+                </Link>
               </div>
             </FadeIn>
           </div>

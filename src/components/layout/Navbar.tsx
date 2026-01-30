@@ -87,9 +87,11 @@ const Navbar = () => {
                             )}
                         </Link>
                     ))}
-                    <Button variant="default" size="sm" className="ml-4">
-                        Admissions Open
-                    </Button>
+                    <Link href="/contact" className="ml-4">
+                        <Button variant="default" size="sm">
+                            Admissions Open
+                        </Button>
+                    </Link>
                 </div>
 
                 {/* Mobile Toggle */}
@@ -123,7 +125,9 @@ const Navbar = () => {
                                     {link.name}
                                 </Link>
                             ))}
-                            <Button className="w-full mt-4">Admissions Open</Button>
+                            <Link href="/contact" className="w-full mt-4">
+                                <Button className="w-full">Admissions Open</Button>
+                            </Link>
                         </div>
                     </motion.div>
                 )}

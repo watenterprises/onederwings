@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import FadeIn from "@/components/ui/FadeIn";
 import Card from "@/components/ui/Card";
@@ -71,9 +72,11 @@ export default function Classes() {
                                 <p className="text-gray-600 mb-8 flex-grow">
                                     {cls.desc}
                                 </p>
-                                <Button variant="outline" className="w-full">
-                                    More Details
-                                </Button>
+                                <Link href="/contact" className="w-full">
+                                    <Button variant="outline" className="w-full">
+                                        More Details
+                                    </Button>
+                                </Link>
                             </Card>
                         </FadeIn>
                     ))}

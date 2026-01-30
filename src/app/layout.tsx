@@ -4,6 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import Mascot from "@/components/ui/Mascot";
 
 const nunito = Nunito({
   variable: "--font-nunito",
@@ -42,6 +43,7 @@ export default function RootLayout({
         <main className="flex-grow pt-20">
           {children}
         </main>
+        <Mascot />
         <Footer />
       </body>
     </html>

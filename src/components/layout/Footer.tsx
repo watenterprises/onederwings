@@ -34,14 +34,11 @@ const Footer = () => {
                             Where little ones learn to fly. A safe, nurturing, and colorful environment for your child's first steps in education.
                         </p>
                         <div className="flex gap-4">
-                            <a href="#" className="p-2 bg-white rounded-full text-brand-blue hover:bg-brand-blue hover:text-white transition-colors">
+                            <a href="https://www.facebook.com/profile.php?id=61585456186742&ref=pl_edit_ig_profile_ac" target="_blank" rel="noopener noreferrer" className="p-2 bg-white rounded-full text-brand-blue hover:bg-brand-blue hover:text-white transition-colors">
                                 <Facebook size={20} />
                             </a>
-                            <a href="#" className="p-2 bg-white rounded-full text-brand-orange hover:bg-brand-orange hover:text-white transition-colors">
+                            <a href="https://www.instagram.com/oneder.wings/" target="_blank" rel="noopener noreferrer" className="p-2 bg-white rounded-full text-brand-orange hover:bg-brand-orange hover:text-white transition-colors">
                                 <Instagram size={20} />
-                            </a>
-                            <a href="#" className="p-2 bg-white rounded-full text-brand-yellow hover:bg-brand-yellow hover:text-white transition-colors">
-                                <Twitter size={20} />
                             </a>
                         </div>
                     </div>

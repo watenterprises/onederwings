@@ -1,22 +1,30 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import FadeIn from "@/components/ui/FadeIn";
 
-const memories = [
-    { title: "Annual Day", date: "2024" },
-    { title: "Sports Day", date: "2024" },
-    { title: "Art Exhibition", date: "2023" },
-    { title: "Field Trip", date: "2023" },
-    { title: "Christmas Party", date: "2023" },
-    { title: "Graduation", date: "2023" },
+// Generate array of image paths
+const galleryImages = [
+    "/VER04699.JPG", "/VER04707.JPG", "/VER04710.JPG", "/VER04711.JPG",
+    "/VER04715.JPG", "/VER04720.JPG", "/VER04723.JPG", "/VER04728.JPG",
+    "/VER04733.JPG", "/VER04740.JPG", "/VER04741.JPG", "/VER04747.JPG",
+    "/VER04752.JPG", "/VER04761.JPG", "/VER04779.JPG", "/VER04791.JPG",
+    "/VER04794.JPG", "/VER04795.JPG", "/VER04798.JPG", "/VER04801.JPG",
+    "/VER04803.JPG", "/VER04804.JPG", "/VER04805.JPG", "/VER04812.JPG",
+    "/VER04819.JPG", "/VER04820.JPG", "/VER04821.JPG", "/VER04829.JPG",
+    "/VER04830.JPG", "/VER04833.JPG", "/VER04835.JPG", "/VER04843.JPG",
+    "/VER04846.JPG", "/VER04849.JPG", "/VER04853.JPG", "/VER04870.JPG",
+    "/VER04873.JPG", "/VER04875.JPG", "/VER04882.JPG", "/VER04887.JPG",
+    "/VER04892.JPG", "/VER04893.JPG", "/VER04897.JPG", "/VER04902.JPG",
+    "/VER04905.JPG"
 ];
 
 export default function Gallery() {
     return (
         <>
-            <SectionWrapper background="blue" className="pt-32 pb-20 text-center">
+            <SectionWrapper background="skyBlue" className="pt-32 pb-20 text-center">
                 <FadeIn>
                     <h1 className="text-5xl md:text-6xl font-display font-bold text-white mb-6">
                         Our Memory Book
@@ -28,26 +36,21 @@ export default function Gallery() {
             </SectionWrapper>
 
             <SectionWrapper background="cloud">
-                <div className="grid md:grid-cols-3 gap-8 px-4">
-                    {memories.map((item, idx) => (
-                        <FadeIn key={idx} delay={idx * 0.1}>
-                            <div className="bg-white p-4 pb-12 shadow-xl transform rotate-1 hover:rotate-0 transition-transform duration-300 relative group cursor-pointer">
-                                {/* Tape Effect */}
-                                <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-32 h-8 bg-white/30 backdrop-blur-sm transform -rotate-2 border border-white/40 shadow-sm z-10"></div>
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 px-4">
+                    {galleryImages.map((src, idx) => (
+                        <FadeIn key={idx} delay={idx * 0.05} direction="up">
+                            <div className="bg-white p-3 pb-8 shadow-xl transform hover:scale-105 hover:rotate-2 transition-all duration-300 relative group cursor-pointer rounded-lg border border-gray-100">
+                                {/* Tape Effect logic handled by CSS or SVG if needed, keeping simple for now */}
+                                <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-24 h-6 bg-white/40 backdrop-blur-sm transform -rotate-1 shadow-sm z-10 border border-white/50"></div>
 
-                                {/* Image Placeholder */}
-                                <div className="aspect-square bg-gray-200 mb-4 overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-500">
-                                    <div className="w-full h-full flex items-center justify-center text-gray-400">
-                                        Image
-                                    </div>
+                                <div className="aspect-[4/3] bg-gray-100 overflow-hidden rounded-sm relative">
+                                    <Image
+                                        src={src}
+                                        alt={`Gallery Image ${idx + 1}`}
+                                        fill
+                                        className="object-cover transition-transform duration-700 group-hover:scale-110"
+                                    />
                                 </div>
-
-                                <h3 className="font-display font-bold text-2xl text-center text-gray-700 handwriting transform -rotate-1">
-                                    {item.title}
-                                </h3>
-                                <span className="absolute bottom-4 right-4 text-gray-400 font-display">
-                                    {item.date}
-                                </span>
                             </div>
                         </FadeIn>
                     ))}

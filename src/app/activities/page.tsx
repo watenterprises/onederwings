@@ -18,7 +18,7 @@ const activities = [
 export default function Activities() {
     return (
         <>
-            <SectionWrapper background="orange" className="pt-32 pb-20 text-center">
+            <SectionWrapper background="deepOrange" className="pt-32 pb-20 text-center">
                 <FadeIn>
                     <h1 className="text-5xl md:text-6xl font-display font-bold text-white mb-6">
                         Fun Zone & Activities
